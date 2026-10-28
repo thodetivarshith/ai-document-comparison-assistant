@@ -102,6 +102,34 @@ The application follows a modular architecture that separates presentation, docu
 
 ```mermaid
 flowchart TD
+    A["User"] --> B["Streamlit Interface"]
+    B --> C["Document Upload"]
+    C --> D["PDF Text Extraction"]
+    D --> E["Comparison Engine"]
+    E --> F["Prompt Construction"]
+    F --> G["Google Gemini API"]
+    G --> H["Response Parsing"]
+    H --> I["Output Validation"]
+    I --> J["Evidence Verification"]
+    J --> K["Report Generation"]
+    K --> L["Comparison Results"]
+    L --> B
+```
+
+### Core Components
+
+| Component | Responsibility |
+|-----------|----------------|
+| `app.py` | Streamlit UI and workflow orchestration |
+| `document_reader.py` | PDF text extraction |
+| `comparison.py` | AI prompting, response parsing, validation, and evidence verification |
+| `report_generator.py` | Generates structured comparison reports |
+| `tests/test_core.py` | Automated regression tests |
+
+The application follows a modular architecture that separates presentation, document processing, AI analysis, and reporting.
+
+```mermaid
+flowchart TD
     A[User] --> B[Streamlit Interface]
     B --> C[Document Input]
     C --> D[PDF Text Extraction]
