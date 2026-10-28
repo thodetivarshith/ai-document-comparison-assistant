@@ -96,25 +96,6 @@ Uses Streamlit to provide a browser-based interface for interacting with the doc
 
 Uses pytest to test core functionality and help prevent regressions as the project evolves.
 
-## System Architecture
-
-The application follows a modular architecture that separates presentation, document processing, AI analysis, and reporting.
-
-```mermaid
-flowchart TD
-    A["User"] --> B["Streamlit Interface"]
-    B --> C["Document Upload"]
-    C --> D["PDF Text Extraction"]
-    D --> E["Comparison Engine"]
-    E --> F["Prompt Construction"]
-    F --> G["Google Gemini API"]
-    G --> H["Response Parsing"]
-    H --> I["Output Validation"]
-    I --> J["Evidence Verification"]
-    J --> K["Report Generation"]
-    K --> L["Comparison Results"]
-    L --> B
-```
 
 ### Core Components
 
